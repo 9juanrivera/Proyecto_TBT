@@ -1,22 +1,24 @@
 const imagenes = document.querySelectorAll(".abrir");
 const modal = document.getElementById("modal");
+const titulo = document.getElementById("titulo");
 const texto = document.getElementById("texto");
 const cerrar = document.querySelector(".cerrar");
 
-// abrir modal con info de cada imagen
+// abrir modal
 imagenes.forEach(img => {
   img.addEventListener("click", () => {
-    modal.style.display = "flex";
-    texto.textContent = img.dataset.texto; // info personalizada
+    modal.style.display = "flex"; // muestra el modal
+    titulo.textContent = img.dataset.titulo;
+    texto.textContent = img.dataset.texto;
   });
 });
 
-// cerrar con la X
+// cerrar modal
 cerrar.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-// cerrar dando click fuera
+// cerrar si se hace click afuera
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
