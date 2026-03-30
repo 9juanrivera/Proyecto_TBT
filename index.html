@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBT</title>
+
+    <!-- la fuente quicksand  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- La conexion con el css-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- la conexion con el css del modal -->
+    <link rel="stylesheet" href="css/modal.css">
+
+    <!-- Logo de la pagina-->
+    <link rel="icon" href="img/amar.png">
+</head>
+
+<body>
+
+<header>
+     <!-- el "logo" es un boton para refrescar no tocar-->
+    <button onclick="location.reload()" class="button" data-text="TBT">
+        <span class="actual-text">&nbsp;TBT&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;TBT&nbsp;</span>
+    </button>
+</header>
+
+<main class="contenedor">
+    <!-- el class es para identificarlo y modficarlo a el contenedor solito y no todo el body -->
+     <!-- cuando empiece con el js tengo que ponerle el id para identifar cada seccion -->
+
+    <p class="Parrafo">...Los inolvidables...</p>
+
+    <section class="cards">
+
+        <article class="card">
+        <!-- dentro del Img tenemos la apertura a los modal de cada uno para esto estoy utlizando los atributos data- que son para guardar la informacion de cada uno -->
+            <img src="img/el_pretty.jpg" alt="Foto de Juan Restrepo" class="abrir"
+                 data-titulo="Imagen 1" 
+                 data-texto="Enamorado de sam"
+                 data-galeria="img1">
+            <p>Juan Restrepo 😩</p>
+        </article>
+
+        <article class="card">
+            <img src="img/brandon.jpg" alt="Foto de Brandon Sepúlveda" class="abrir"
+                 data-titulo="Imagen 2" 
+                 data-texto="Este es el contenido 2">
+            <p>Brandon Sepúlveda 😒</p>
+        </article>
+
+        <article class="card">
+            <img src="img/fede.jpg" alt="Foto de Federico Henao" class="abrir"
+                 data-titulo="Imagen 3"
+                 data-texto="Este es el contenido 3">
+            <p>Federico Henao 😮‍💨</p>
+        </article>
+
+        <article class="card">
+            <img src="img/salo.jpg" alt="Foto de Salo Hernández" class="abrir"
+                 data-titulo="Imagen 4"
+                 data-texto="Este es el contenido 4">
+            <p>Salo Hernández 😮‍💨</p>
+        </article>
+
+        <article class="card">
+            <img src="img/fofi.jpg" alt="Foto de Sofi Ocampo" class="abrir"
+                 data-titulo="Imagen 5"
+                 data-texto="Este es el contenido 5">
+            <p>Sofi Ocampo 😮‍💨</p>
+        </article>
+
+        <article class="card">
+            <img src="img/lore.jpg" alt="Foto de Lorena Jiménez" class="abrir"
+                 data-titulo="Imagen 6"
+                 data-texto="jhoan volveee ">
+            <p>Lorena Jiménez 😮‍💨</p>
+        </article>
+
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2 id="titulo"></h2>
+            <p id="texto"></p>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer_contenido">
+        <h2>TBT</h2>
+        <p>Desparche Productions</p>
+
+        <h3>Sígueme</h3>
+        <div class="iconos">
+            <a href="https://www.instagram.com/juanrestrepo423/" target="_blank">
+                juanrestrepo423 📷
+            </a>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>
