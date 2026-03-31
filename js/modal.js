@@ -3,7 +3,6 @@ const modal = document.getElementById("modal");
 const titulo = document.getElementById("titulo");
 const texto = document.getElementById("texto");
 const galeria = document.getElementById("galeria");
-
 const cerrar = document.querySelector(".cerrar");
 
 imagenes.forEach(img => {
@@ -11,25 +10,27 @@ imagenes.forEach(img => {
     titulo.textContent = img.dataset.titulo;
     texto.textContent = img.dataset.texto;
 
-    // el limpiado de las fotos de los otros
+    // limpiar galería
     galeria.innerHTML = "";
 
-    // agarrar la imagen
+    // obtener imágenes y nombres
     const imagenesArray = (img.dataset.imagen || img.src).split(",");
+    const nombresArray = (img.dataset.nombres || "").split(",");
 
     imagenesArray.forEach((src, index) => {
-      const ruta = src.trim();
+      const contenedor = document.createElement("div");
+      contenedor.classList.add("item-galeria");
 
       const nuevaImg = document.createElement("img");
-      nuevaImg.src = ruta;
+      nuevaImg.src = src.trim();
 
+      const nombre = document.createElement("p");
+      nombre.textContent = nombresArray[index]?.trim() || "Sin nombre";
 
-      // click en miniatura
-      nuevaImg.addEventListener("click", () => {
-        imagenPrincipal.src = ruta;
-      });
+      contenedor.appendChild(nuevaImg);
+      contenedor.appendChild(nombre);
 
-      galeria.appendChild(nuevaImg);
+      galeria.appendChild(contenedor);
     });
 
     modal.style.display = "flex";
