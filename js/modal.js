@@ -5,7 +5,7 @@ const texto = document.getElementById("texto");
 const galeria = document.getElementById("galeria");
 const cerrar = document.querySelector(".cerrar");
 
-// 👉 Carrusel con imagen + nombre
+// carrusel brandon
 const carrusel = [
   { src: "img/exs/brandon/isabel.jpg", nombre: "Isabel 🖤" },
   { src: "img/exs/brandon/britney.jpg", nombre: "Britney" },
@@ -34,7 +34,7 @@ imagenes.forEach(img => {
     // limpiar galería
     galeria.innerHTML = "";
 
-    // 🔥 SOLO este modal tiene carrusel
+    // si otro necesita carrucel dta carrusel= true
     if (img.dataset.carrusel) {
 
       galeria.innerHTML = `
@@ -72,7 +72,7 @@ imagenes.forEach(img => {
       mostrarImagen();
 
     } else {
-      // 👉 TU CÓDIGO ORIGINAL (igual)
+      
       const imagenesArray = (img.dataset.imagen || img.src).split(",");
       const nombresArray = (img.dataset.nombres || "").split(",");
 
