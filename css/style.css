@@ -149,12 +149,10 @@ header {
 
 .footer a {
     text-shadow: #37FF8B 0px 0px 2px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
 
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        text-align: center;
-    }
 }
 
