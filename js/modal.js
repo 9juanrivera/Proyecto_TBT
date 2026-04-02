@@ -97,6 +97,7 @@ imagenes.forEach(img => {
   });
 });
 
+
 // cerrar con la X
 cerrar.addEventListener("click", () => {
   modal.style.display = "none";
@@ -108,3 +109,15 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+
+// abrir/cerrar panel
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+
+// cambiar canción
+function cambiarCancion(src) {
+  const player = document.getElementById("player");
+  player.src = src;
+  player.play();
+}

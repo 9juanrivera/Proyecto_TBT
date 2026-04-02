@@ -27,6 +27,26 @@
         <span class="actual-text">&nbsp;TBT&nbsp;</span>
         <span aria-hidden="true" class="hover-text">&nbsp;TBT&nbsp;</span>
     </button>
+
+    <!-- Botón hamburguesa -->
+    <aside class="menu-btn" onclick="toggleMenu()">☰</aside>
+
+        <!-- Lista de musica -->
+    <aside id="menu">
+        <h3>Música</h3>
+
+        <audio id="player" controls></audio>
+
+        <ul>
+            <li onclick="cambiarCancion('raw/Cosaspendientes.mp3')">Cosas Pendientes</li>
+            <li onclick="cambiarCancion('raw/cositaslak.mp3')">Cositas</li>
+            <li onclick="cambiarCancion('raw/olvidala.mp3')">Olvidala</li>
+            <li onclick="cambiarCancion('raw/situmequisieras.mp3')">Sí Tú Me Quisieras</li>
+            <li onclick="cambiarCancion('raw/Recuerdos.mp3')">Recuerdos</li>
+            <li onclick="cambiarCancion('raw/hawai.mp3')">Hawai</li>
+            <li onclick="cambiarCancion('raw/meparte.mp3')">Me parte el corazón</li>
+        </ul>
+    </aside>
 </header>
 
 <main class="contenedor">
@@ -114,12 +134,12 @@
 
 <footer class="footer">
 
-    <div class="footer_contenido">
+    <div>
         <h2>TBT</h2>
         <p>Desparche Productions</p>
 
         <h3>Sígueme</h3>
-        <div class="iconos">
+        <div>
             <a href="https://www.instagram.com/juanrestrepo423/" target="_blank">
                 juanrestrepo423 📷
             </a>
