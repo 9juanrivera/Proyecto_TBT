@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 120px;
+  width: 150px;
 }
 
 /* IMAGEN */
@@ -65,14 +65,14 @@
 
 /* HOVER */
 .item-galeria img:hover {
-  transform: scale(1.1);
+  transform: scale(1.7);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* TEXTO DEBAJO */
 .item-galeria p {
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 15px;
   text-align: center;
   color: black;
 }

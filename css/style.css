@@ -6,10 +6,11 @@ body {
 
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
 }
 
 /* No lo toque sacado de uiverse*/
@@ -22,7 +23,7 @@ header {
   cursor: pointer;
 
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(7, 7, 7, 0.6);
   --animation-color: #37FF8B;
   --fs-size: 2em;
 
@@ -94,11 +95,13 @@ header {
     font-style: bold;
     text-shadow: 0px 0px 2px #000000;
     color: black;
+    
+
 }
 
 
 .card:hover {
-    transform: scale(1.08);
+    transform: scale(1.2);
 }
 
 .card img {
@@ -106,6 +109,8 @@ header {
     height: 100%;
     box-shadow: 0px 0px 6px #37FF8B;
     object-fit: cover;
+    
+
 }
 
 .textos {
@@ -145,6 +150,7 @@ header {
     padding: 20px;
     font-family: quicksand;
     text-shadow: 0px 0px 2px #37FF8B;
+    
 }
 
 .footer a {
